@@ -10,6 +10,7 @@ up to 168 hours (7 days) ahead.
 The system is designed for **offline inference**, **CPU-only execution**,
 and **predictable runtime**, without relying on global numerical weather
 prediction (NWP) models, reanalysis data, or external APIs.
+
 -------------------------------------------------------------
 # Key properties
 - ~2 MB model size

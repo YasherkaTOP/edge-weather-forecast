@@ -1,6 +1,8 @@
 # edge-weather-prediction (python 3.11)
 
 ### Edge-first neural weather forecasting for local stations
+Habr article: https://habr.com/ru/articles/995120/
+
 -------------------------------------------------------------
 # Overview 
 

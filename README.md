@@ -1,7 +1,9 @@
-# edge-weather-prediction (python 3.11)
-
+# edge-weather-forecast
+The test and training were conducted in approximately the same climate zone.
 ### Edge-first neural weather forecasting for local stations
-Habr article: https://habr.com/ru/articles/995120/
+Habr articles: 
+- https://habr.com/ru/articles/995120/
+- not yet
 
 -------------------------------------------------------------
 # Overview 
@@ -15,8 +17,8 @@ prediction (NWP) models, reanalysis data, or external APIs.
 
 -------------------------------------------------------------
 # Key properties
-- ~2 MB model size
-- ~600k trainable parameters
+- ~600 KB model size
+- ~130k trainable parameters
 - CPU-only inference
 - Fully offline
 - Hourly resolution, 168h forecast horizon
@@ -50,15 +52,15 @@ reported separately for different forecast horizons.
 **Horizon	MAE (°C)** on seen/unseen stations
 | Horizon  | MAE (°C) seen | MAE (°C) unseen |
 |----------|-------|--------|
-| 0-6h     | 0.8   | 0.85   |
-| 6-24h    | 1.75  | 1.8    |
-| 1-3d     | 2.95  | 3.0    |
-| 3-7d     | 3.85  | 3.85   |
+| 0-6h     | 0.83  | 0.88   |
+| 6-24h    | 1.72  | 1.95   |
+| 1-3d     | 2.70  | 3.0    |
+| 3-7d     | 3.35  | 3.40   |
 
 In addition to MAE, amplitude preservation
 (std(pred) / std(true)) is monitored to detect over-smoothing,
 which is common in long-horizon forecasting.
-**AP = ~0.79**
+**AP = ~0.69**
 
 -------------------------------------------------------------
 # Limitations
@@ -71,24 +73,4 @@ which is common in long-horizon forecasting.
 Open-source (MIT)
 
 -------------------------------------------------------------
-# Repository structure
-
-FullResearch.ipynb - General research, training/testing models
-
-DataUtils.py - Scaler, custom dataset, some functions for data preparing
-
-InferenceUtils.py - Inference functions and **Inference GUIDE**
-
-ModelModules.py - Different model modules/layers and EMA
-
-Callbacks - Custom callbacks for training
-
-ModelUtils.py - Custom loss
-
-TestUtils.py - Some functions for model testing
-
-embedder_model.pt - Contains GNN-embedder and metadata
-
-edge_weather_model.pt - Contains Scaler and Model
-
 #### Most experimental details and ablation studies are documented in the notebooks.

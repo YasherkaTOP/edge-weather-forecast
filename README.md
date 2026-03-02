@@ -3,7 +3,7 @@ The test and training were conducted in approximately the same climate zone.
 ### Edge-first neural weather forecasting for local stations
 Habr articles: 
 - https://habr.com/ru/articles/995120/
-- not yet
+- https://habr.com/ru/articles/1005428/
 
 -------------------------------------------------------------
 # Overview 
